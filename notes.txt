@@ -1,0 +1,2 @@
+1. we use 'ng test' to test instead of 'ng serve'.
+2. 'ng test' will build the application and run Karma which  our test runner.
