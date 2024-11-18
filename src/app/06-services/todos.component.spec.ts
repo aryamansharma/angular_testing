@@ -56,7 +56,7 @@ describe('TodosComponent', () => {
     expect(spy).toHaveBeenCalledWith(1); //  we being specific with id which we want to deliver to call with toHaveBeenCalledWith() method.
   });
 
-  xit('should not delete the todo if the user clicks on cancel', () => {
+  it('should not delete the todo if the user clicks on cancel', () => {
     // this x in the begining of it will disable this test.
     spyOn(window, 'confirm').and.returnValue(false);
     let spy = spyOn(service, 'delete').and.returnValue(of({}));
