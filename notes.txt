@@ -1,3 +1,26 @@
 1. we use 'ng test' to test instead of 'ng serve'.
 2. 'ng test' will build the application and run Karma which  our test runner.
 3. 'ng test --code-coverage' will create a new folder named coverage which tells how much of our code is covered under test. 
+
+4. difference between karma and jasmine
+
+| Feature     | **Jasmine**                                     | **Karma**                                                    |
+| ----------- | ----------------------------------------------- | ------------------------------------------------------------ |
+| **Type**    | Testing **framework**                           | Test **runner**                                              |
+| **Purpose** | Defines & runs **test logic/assertions**        | **Executes** tests in browsers & reports results             |
+| **Usage**   | You write your test cases in Jasmine syntax     | Karma loads Jasmine tests and runs them in real browsers     |
+| **Output**  | Says whether individual test logic passes/fails | Displays **results across browsers**, collects coverage etc. |
+| **Example** | `describe()`, `it()`, `expect()`                | Runs tests using headless Chrome, Firefox, etc.              |
+
+5. difference between angular unit testing and end to end testing
+
+| Feature                  | **Unit Testing**                                  | **End-to-End (E2E) Testing**                        |
+| ------------------------ | ------------------------------------------------- | --------------------------------------------------- |
+| **Scope**                | Tests **individual units** (components, services) | Tests the **entire application flow**               |
+| **Goal**                 | Verify that a single unit works as expected       | Simulate **real user behavior** and test full flows |
+| **Speed**                | Very **fast** (runs in memory)                    | **Slower** (runs in browser with real DOM)          |
+| **Tools**                | Jasmine, Karma                                    | Cypress (modern), or Protractor (older)             |
+| **Example**              | Test if a service method returns correct value    | Test if user can log in and see their dashboard     |
+| **Environment**          | Runs in an isolated test environment              | Runs in a real or headless browser                  |
+| **Dependency Isolation** | Mocks dependencies like HTTP calls                | Tests full app with real backend or mock APIs       |
+| **When to Use**          | To test logic of components/services/pipes etc.   | To test user journeys and app integration           |
